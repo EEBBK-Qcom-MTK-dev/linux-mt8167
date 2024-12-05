@@ -263,6 +263,9 @@ static const struct mfd_cell mt6392_devs[] = {
 		.resources = mt6392_rtc_resources,
 		.of_compatible = "mediatek,mt6392-rtc",
 	}, {
+		.name = "mt6392-regulator",
+		.of_compatible = "mediatek,mt6392-regulator",
+	}, {
 		.name = "mtk-pmic-keys",
 		.num_resources = ARRAY_SIZE(mt6392_keys_resources),
 		.resources = mt6392_keys_resources,
