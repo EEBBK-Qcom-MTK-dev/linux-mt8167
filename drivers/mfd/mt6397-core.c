@@ -119,8 +119,8 @@ static const struct resource mt6331_keys_resources[] = {
 };
 
 static const struct resource mt6392_keys_resources[] = {
-	DEFINE_RES_IRQ(MT6392_IRQ_PWRKEY),
-	DEFINE_RES_IRQ(MT6392_IRQ_FCHRKEY),
+	DEFINE_RES_IRQ_NAMED(MT6392_IRQ_PWRKEY, "powerkey"),
+	DEFINE_RES_IRQ_NAMED(MT6392_IRQ_FCHRKEY, "homekey"),
 };
 
 static const struct resource mt6397_keys_resources[] = {
@@ -257,12 +257,12 @@ static const struct mfd_cell mt6359_devs[] = {
 };
 
 static const struct mfd_cell mt6392_devs[] = {
-	{
+	/*{
 		.name = "mt6397-rtc",
 		.num_resources = ARRAY_SIZE(mt6392_rtc_resources),
 		.resources = mt6392_rtc_resources,
 		.of_compatible = "mediatek,mt6392-rtc",
-	}, {
+	},*/ {
 		.name = "mt6392-regulator",
 		.of_compatible = "mediatek,mt6392-regulator",
 	}, {
