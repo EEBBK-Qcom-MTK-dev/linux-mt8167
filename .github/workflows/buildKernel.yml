@@ -25,7 +25,7 @@ jobs:
           mkdir output
       - name: Prepare config
         run: |
-          make O=output ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- sdm660_defconfig
+          make O=output ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- x04g_defconfig
       - name: Compile kernel
         run: |
           make O=output ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j2 Image.gz
