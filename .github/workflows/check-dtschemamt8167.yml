@@ -73,6 +73,6 @@ jobs:
       - name: Upload DTBs
         uses: actions/upload-artifact@v4
         with:
-          name: DTBs
+          name: MT8167-DTBs
           path:
              build-dtbs-check/arch/arm64/boot/dts/mediatek/mt8167-*.dtb
