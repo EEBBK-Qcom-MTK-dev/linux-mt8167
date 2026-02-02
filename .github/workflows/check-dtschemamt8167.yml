@@ -81,4 +81,4 @@ jobs:
         with:
           name: DTBs
           path:
-             build-dtbs-check/arch/arm64/boot/dts/mediatek/*.dtb
+             build-dtbs-check/arch/arm64/boot/dts/mediatek/mt8167-*.dtb
