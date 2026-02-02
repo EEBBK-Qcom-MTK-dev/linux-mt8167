@@ -272,7 +272,7 @@
  			};
  
  			mt6392_vxo22_reg: ldo-vxo22 {
- 				regulator-name = "ldo_vxo22"
+ 				regulator-name = "ldo_vxo22";
  				regulator-min-microvolt = <2200000>;
  				regulator-max-microvolt = <2200000>;
  				regulator-enable-ramp-delay = <110>;
