@@ -4,9 +4,9 @@ on:
     types: [opened, synchronize, reopened]
   push:
     branches:
-      - qcom-sdm660-6.*.y
+      - master
     tags:
-      - v*-sdm660
+      - v*
 jobs:
   dbts-check:
     runs-on: ubuntu-22.04
@@ -35,7 +35,7 @@ jobs:
           mkdir build-dtbs-check
       - name: Prepare config
         run: |
-          make O=build-dtbs-check ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig sdm660_defconfig
+          make O=build-dtbs-check ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig x04g_defconfig
       - name: Compile DTBs
         run: |
           make O=build-dtbs-check ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- dtbs
